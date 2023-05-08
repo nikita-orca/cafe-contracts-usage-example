@@ -1,0 +1,243 @@
+# private key files
+*.pem
+
+# allow test keys used by SSO unit tests
+!base_api/api/tests_api/sso_files/*.pem
+
+*/**/test-reports
+
+broots/ubuntu18/home/ubuntu/sensitive_repo*
+broots/barclays*
+
+config.json
+.idea
+.coverage
+__global_coverage__
+junit.xml
+__pycache__
+
+git_hooks/.*
+
+**/.env2
+
+# terraform intermediate files
+.terraform
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# pycharm
+.idea
+
+# npm
+node_modules/
+npm-debug.log
+
+#Folders
+.DS_Store
+
+# Webpack
+/assets/bundles/*
+/assets/webpack_bundles/*
+/webpack-stats.json
+/jquery-webpack-stats.json
+
+# Sass
+.sass-cache
+*.map
+
+# Spritesmith
+spritesmith-generated/
+spritesmith.scss
+
+*.log
+!broots/**/*.log
+devdb/
+mydb
+
+venv/
+
+sensors/services/sonar/account-data
+sensors/services/sonar/account_data.tar.gz
+sensors/services/sonar/tests/account-data
+sensors/services/sonar/tests/account_data.tar.gz
+
+# base_api/django related
+# base_api/config/settings/local.py
+base_api/staticfiles/*
+base_api/mediafiles/*
+base_api/mydb
+base_api/*.log
+base_zappa_settings.json
+base_api-*.json
+base_api/orca
+base_api/cw_tail.py
+
+# collector
+database1_env
+
+# lib/orca/analytics/elastic/package*
+
+# coverage
+htmlcov/
+
+#cloudmapper
+account-data/
+!scan_backend/services/clouder/commands/tests/account-data/
+external_dockers/cloudmapper/requirements.txt
+
+# terraform lambda
+terraform/orca/*/logs_to_elastic.zip
+terraform/orca/*/ecs_error_notify.zip
+terraform/orca/*/django_heartbeat.zip
+terraform/orca/*/sqs_metric_tracking.zip
+terraform/orca/*/collect_logs_to_coralogix.zip
+terraform/orca/*/ssm_ps_handler.zip
+terraform/orca/*/edge_redirect.zip
+terraform/orca/*/populate_nlb_tg_with_alb_ip.zip
+terraform/orca/*/cloudtrail_to_es.zip
+terraform/orca/*/django_heartbeat_lambda.zip
+terraform/orca/*/ecs_instance_agent_wd.zip
+
+# RnD lambdas
+terraform/aws_rnd/edge_redirect.zip
+terraform/aws_rnd/logs_to_elastic.zip
+terraform/aws_rnd/populate_nlb_tg_with_alb_ip.zip
+terraform/aws_rnd/ssm_ps_handler.zip
+terraform/aws_rnd/ecs_instance_agent_wd.zip
+terraform/aws_rnd/edge_csp.zip
+
+# Devenv stuff
+devops/environment_setups/env_configuration.json
+devops/environment_setups/terraform/account/testing-k8s/eks_*
+devops/environment_setups/terraform/account/production/eks_*
+devops/environment_setups/terraform/account/dev/*.zip
+devops/environment_setups/terraform/account/production/*.zip
+devops/environment_setups/terraform/.templates
+
+# Helm generated value files
+.helm_values/*
+
+
+external_dockers/*/requirements.txt
+.vscode/
+.pytest_cache/
+.history/
+
+# local_analyzer output files for debug purpose
+scan_backend/services/analyzer/tests/test_score_calculator/actual_res.json
+scan_backend/services/analyzer/output1.json
+scan_backend/services/analyzer/output2.json
+scan_backend/services/analyzer/output3.json
+scan_backend/services/analyzer/output4.json
+scan_backend/services/analyzer/output5.json
+scan_backend/services/analyzer/output6.json
+scan_backend/services/analyzer/output7.json
+base_api/logfile
+
+# UT auto created files
+base_api/api/tests_api/sso_files/subject_data.db
+
+# vuls amazon2 cache history files
+broots/amazon2/var/cache/
+broots/amazon2/var/lib/yum/history/
+broots/amazon2/var/lib/yum/rpmdb-indexes/
+scan_backend/services/analyzer/logfile
+
+# stop all instances lambda zip
+cli/*.csv
+system_tests/*.cprof
+
+.mypy_cache/
+.dmypy.json
+results/*
+pyrightconfig.json
+
+utils/marketplace_subscriptions/sel_profile_dir/
+
+# ignore coverage
+*coverage.xml
+
+# Bazel
+/bazel-*
+
+# Orca state files
+.orca_state
+
+# Pants
+.pants_cache
+.pants.d
+.pids
+dist
+
+# git-secret
+.gitsecret/keys/random_seed
+!*.secret
+.github/workflows/*.env
+/utils/api_scripts/vpnconnect.json
+/scan_backend/services/clouder/commands/tests/account-data-gcp/simple-project/public_nodes.json
+/scan_backend/services/clouder/commands/tests/account-data-gcp/simple-project/data.json
+.github/workflows/droid_bot_repo_key
+.github/workflows/oci_collector_builder_key
+.github/workflows/threatencyclopedia_rsa
+devops/tools/onboarding/credentials.json
+devops/tools/onboarding/token.pickle
+devops/tools/onboarding/config
+.github/workflows/personal-env.env
+orchestrator/tests/events-semaphore.lock
+scan_management/services/gc_worker/gc_worker
+scan_management/services/db_scan_worker/db_scan_worker
+devops/on-call-tools/secrets/*.env
+devops/environment_setups/terraform/deployments/production-gov/management-fed/secret_files/management-fed_secrets.tfvars.ejson
+devops/environment_setups/terraform/deployments/production-gov/production-fed/secret_files/production-fed_secrets.tfvars.ejson
+devops/environment_setups/terraform/deployments/testing/testing-fed/secret_files/testing-fed_secrets.tfvars.ejson
+devops/secrets/china_credentials
+devops/secrets/common_secrets
+
+base_api/api/tests_api/x.json
+
+devops/environment_setups/terraform/templates/*/*.tfvars
+devops/environment_setups/terraform/templates/*/*.zip
+devops/environment_setups/terraform/templates/*/*/*.tfvars
+devops/environment_setups/terraform/account/*/*.zip
+devops/environment_setups/*.json
+
+# local machine specific files
+_private
+devops/on-call-tools/secrets/rnd.env
+.github/workflows/onboarding.env
+.dmypy.json
+
+# orca python
+external_dockers/orca_python/image.info
+external_dockers/orca_python/jfrog.secret.env
+
+# ignore pnats junit folder
+.test_results/
+
+# direnv rc file
+.envrc
+
+# pyenv local python version pin
+.python-version
+
+# asdf tool config file
+.tool-versions
+
+# ignore the kav_shared socket
+kav_shared/
+
+# ignore local machine settings
+base_api/config/settings/private.py
+
+# Crash log files
+crash.log
+
+# ejson keys
+ejson/keys/*
+
+# graph
+restartable_mapper_files/
+
+# account_data tar file
+account_data.tar.gz
