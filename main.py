@@ -1,19 +1,19 @@
 import faust
 from orca.contracts.coffee_ordered import CoffeeOrdered
 from orca.contracts.contract_utils import ContractDetails, ContractIdentifier
-from orca.contracts.order_instructions_recieved import \
-    OrderInstructionsRecieved
+from orca.contracts.order_instructions_received import \
+    OrderInstructionsReceived
 
 app = faust.App("cafe", broker="kafka:9092", value_serializer="json")
 
 ORDER_INPUT_CONTRACT_ID = ContractIdentifier(
-    domain="cafe",
+    domain="examples",
     contract_name="coffee_ordered",
     contract_version=1,
 )
 ORDER_INSTRUCTIONS_OUTPUT_CONTRACT_ID = ContractIdentifier(
-    domain="cafe",
-    contract_name="order_instructions_recieved",
+    domain="examples",
+    contract_name="order_instructions_received",
     contract_version=1,
 )
 
@@ -43,7 +43,7 @@ async def process_order(order_stream):
         info_for_barista += f"Prepare {order.coffee_type}"
 
         await INSTRUCTIONS_OUTPUT_TOPIC.send(
-            value=OrderInstructionsRecieved(
+            value=OrderInstructionsReceived(
                 customer_id=order.customer_id,
                 info_for_barista=info_for_barista,
                 time_limit_in_minutes=time_limit_in_minutes,

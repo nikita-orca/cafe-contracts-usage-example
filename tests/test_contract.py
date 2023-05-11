@@ -63,3 +63,31 @@ async def test_contract_coffee_order_service(
         await worker.stop()
     # 3.
     await order_instructions_output_mock.async_consume(number_of_expected_messages=3)
+
+
+@pytest.mark.asyncio()
+async def test_contract_coffee_order_service_only_vip(
+    order_input_contract_mock: ContractMock,
+    order_instructions_output_mock: ContractMock,
+) -> None:
+    await order_input_contract_mock.async_produce(included_tags={"is_vip": True})
+    worker = faust.Worker(app, loglevel="INFO")
+    try:
+        await asyncio.wait_for(worker.start(), 10)
+    except asyncio.exceptions.TimeoutError:
+        await worker.stop()
+    await order_instructions_output_mock.async_consume(number_of_expected_messages=1)
+
+
+@pytest.mark.asyncio()
+async def test_contract_coffee_order_service_only_latte(
+    order_input_contract_mock: ContractMock,
+    order_instructions_output_mock: ContractMock,
+) -> None:
+    await order_input_contract_mock.async_produce(included_labels={"latte"})
+    worker = faust.Worker(app, loglevel="INFO")
+    try:
+        await asyncio.wait_for(worker.start(), 10)
+    except asyncio.exceptions.TimeoutError:
+        await worker.stop()
+    await order_instructions_output_mock.async_consume(number_of_expected_messages=1)

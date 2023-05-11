@@ -743,14 +743,14 @@ tests = ["Sphinx", "doubles", "flake8 (<3)", "flake8-quotes", "mock (<1.1.0)", "
 
 [[package]]
 name = "orca-contracts-coffee-ordered"
-version = "1.0.0.dev4920428500"
+version = "1.0.0"
 description = "Project to contain all tools to produce coffee-ordered contracts."
 category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "orca_contracts_coffee_ordered-1.0.0.dev4920428500-py3-none-any.whl", hash = "sha256:3d3ba646b24f4264e7b871650dc8be4f6f9cea46192701607cf677ad63b16c31"},
-    {file = "orca_contracts_coffee_ordered-1.0.0.dev4920428500.tar.gz", hash = "sha256:b9422677bbba94c0866711be3ec641c0f473ac6bcbaf49d7fd928f1e4475ab29"},
+    {file = "orca_contracts_coffee_ordered-1.0.0-py3-none-any.whl", hash = "sha256:3babe70f679426400e79bf12d4800b10646b850f4cccd1730d5ff83ff23020af"},
+    {file = "orca_contracts_coffee_ordered-1.0.0.tar.gz", hash = "sha256:1265a06f5dcdad085e2202a0f56072e99c48133b9192cac482279bbd386fb55f"},
 ]
 
 [package.dependencies]
@@ -763,14 +763,14 @@ reference = "jfrog"
 
 [[package]]
 name = "orca-contracts-contract-utils"
-version = "1.5.0"
+version = "1.6.0"
 description = "Utils for working with contracts"
 category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "orca_contracts_contract_utils-1.5.0-py3-none-any.whl", hash = "sha256:054c888079d026857f78f7c654acb14b84a987f27d8670a643e6e64014374af4"},
-    {file = "orca_contracts_contract_utils-1.5.0.tar.gz", hash = "sha256:d8c51030e290f06d0ec4b50c1b4c8682b2cea03f0bbb811dbbf0738a8730798e"},
+    {file = "orca_contracts_contract_utils-1.6.0-py3-none-any.whl", hash = "sha256:63751bf0ce82bd5a0b05947c8d23af9d41fb578d3c1143e1e3b3e0add1f33596"},
+    {file = "orca_contracts_contract_utils-1.6.0.tar.gz", hash = "sha256:6fb41d11379912784eaf8eb18a34682330723ff9cfea7d1dc8392a0a20e88d42"},
 ]
 
 [package.dependencies]
@@ -787,15 +787,15 @@ url = "https://orcasecurity.jfrog.io/artifactory/api/pypi/orca-pypi/simple"
 reference = "jfrog"
 
 [[package]]
-name = "orca-contracts-order-instructions-recieved"
-version = "1.0.0.dev4920606417"
-description = "Project to contain all tools to produce order-instructions-recieved contracts."
+name = "orca-contracts-order-instructions-received"
+version = "1.0.0"
+description = "Project to contain all tools to produce order-instructions-received contracts."
 category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "orca_contracts_order_instructions_recieved-1.0.0.dev4920606417-py3-none-any.whl", hash = "sha256:0c53ec6f6bd2f2af5e1ee002df5dc606ed2b4c8ae47280fdc629064694df68e2"},
-    {file = "orca_contracts_order_instructions_recieved-1.0.0.dev4920606417.tar.gz", hash = "sha256:cd2355d280de802fbfabe2bac18b6faaaffadf491d0dce7a60545536d082bcfc"},
+    {file = "orca_contracts_order_instructions_received-1.0.0-py3-none-any.whl", hash = "sha256:d6cc2e8ef0fa316c27cd212b7824091ad20635ac831127c5bd7f92617bdacd53"},
+    {file = "orca_contracts_order_instructions_received-1.0.0.tar.gz", hash = "sha256:8ce8537529cd851c43f959d9277c26063c6a3c13f54b82dc478db62cee594c81"},
 ]
 
 [package.dependencies]
@@ -1348,4 +1348,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "efbe641dda9be43936f089ec53df0dc97ea4ebb50d1fda4bf6cbd3a922a35086"
+content-hash = "9674a68c6fc2ff74b0b6e76ab9318a405b3a082bd5bc9a7e420334d0c2b6bee5"
